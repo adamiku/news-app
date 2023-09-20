@@ -1,9 +1,6 @@
 import Header from "@/components/Header";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yoyo fam news",
@@ -17,8 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="bg-gray-100  dark:bg-zinc-900 transition-all duration-700">
         <Header />
+        <div className="max-w-6xl mx-auto"></div>
         {children}
       </body>
     </html>
