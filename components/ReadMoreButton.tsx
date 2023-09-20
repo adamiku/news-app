@@ -12,12 +12,10 @@ function ReadMoreButton({ article }: Props) {
   const handleClick = () => {
     const queryString = Object.entries(article)
       .map(([key, value]) => {
-        console.log(`${key}=${value}`);
         return `${key}=${value}`;
       })
       .join("&");
     const url = `/article?${queryString}`;
-    console.log(url);
     router.push(url);
   };
 
