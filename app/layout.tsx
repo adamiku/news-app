@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Providers from "@/components/Providers";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -14,11 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100  dark:bg-zinc-900 transition-all duration-700">
-        <Header />
-        <div className="max-w-6xl mx-auto"></div>
-        {children}
-      </body>
+      <Providers>
+        <body className="bg-gray-100  dark:bg-zinc-900 transition-all duration-700">
+          <Header />
+          <div className="max-w-6xl mx-auto"></div>
+          {children}
+        </body>
+      </Providers>
     </html>
   );
 }
